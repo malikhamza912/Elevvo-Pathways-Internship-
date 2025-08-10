@@ -1,0 +1,68 @@
+body
+{
+    background-image: url('bg.png');
+    align-items: center;
+    text-align: center;
+}
+
+form
+{
+    background-color: rgba(1, 1, 1, 0.8);
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+h2
+{
+    color: white;
+    padding-top: 20px;
+    font-size: large;
+}
+
+h1
+{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form-items
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-bottom: 10px;
+}
+
+#inputs
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+}
+
+.submit-btn
+{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.submit-btn:hover
+{
+    background-color: #62ff6a;
+}
