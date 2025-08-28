@@ -15,18 +15,18 @@ export default function OverviewPage() {
     <Layout>
         <h1 className="OverviewPage text-white text-center font-bold text-[96px] pb-2">OVERVIEW</h1>
         <p className="text-center text-lg text-white font-bold text-[16px] pb-10">This is the overview page where you can find general information and insights. Click on any one to view a detailed view.</p>
-        <div className="flex flex-col items-center rounded-lg shadow-lg bg-[rgba(1,1,1,0.8)] pt-20 pb-20 pr-20 pl-20 mt-14 mb-24 mr-28 ml-28 sm:mr-44 sm:ml-44 lg:mr-18 lg:ml-18">
+        <div className="flex flex-col items-center mt-14 mb-24 mr-28 ml-28 sm:mr-44 sm:ml-44 lg:mr-18 lg:ml-18">
 
             <div className="grid grid-cols-1 gap-x-16 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
 
-                <div className="text-center bg-yellow-400 p-8 aspect-square h-72 w-72 md:h-50 md:w-50 lg:w-56 lg:h-56 xl:w-64 xl:h-64 mb-4 cursor-pointer hover:bg-[rgba(128,117,0,0.6)] transition duration-300 flex flex-col items-center justify-center" onClick={performNav}>
+                <div className="text-center bg-white p-8 aspect-square h-72 w-72 md:h-50 md:w-50 lg:w-56 lg:h-56 xl:w-64 xl:h-64 mb-4 cursor-pointer hover:bg-[rgba(255,255,255,0.5)] transition duration-300 flex flex-col items-center justify-center" onClick={performNav}>
                     <p className="font-bold text-3xl">ACTIVE PROJECTS:</p>
                     <p className="mt-6 text-3xl text-black font-semibold">5</p>
                 </div>
 
                 <motion.div 
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="relative bg-[rgba(77,255,86,1)] transition-all duration-300 ease-in-out flex flex-col items-center h-72 w-72 md:h-50 md:w-50 lg:w-56 lg:h-56 xl:w-64 xl:h-64 mb-4 aspect-square p-8 cursor-pointer hover:bg-[rgba(77,255,86,0.5)]" 
+                    className={`relative bg-black transition-all duration-300 ease-in-out flex flex-col items-center h-72 w-72 md:h-50 md:w-50 lg:w-56 lg:h-56 xl:w-64 xl:h-64 mb-4 aspect-square p-8 cursor-pointer ${isExpanded ? "bg-white" : "bg-white text-black hover:bg-[rgba(255,255,255,0.5)]"}`}
                     layout
                     transition={{ duration: 0.3, type:"tween" }}
                     style={{
@@ -36,7 +36,6 @@ export default function OverviewPage() {
                         width: isExpanded ? "100%" : undefined,
                         height: isExpanded ? "50rem" : undefined,
                         textAlign: isExpanded ? "left" : "left",
-                        backgroundColor: isExpanded ? "rgba(255,255,255,255)" : "rgba(77,255,86,1)",
                         color: isExpanded ? "rgba(1,1,1,1)" : undefined,
                     }}
                     >
@@ -61,7 +60,7 @@ export default function OverviewPage() {
                         )}
                     </motion.div>
 
-                <div className="text-center bg-red-500 p-8 aspect-square h-72 w-72 md:h-50 md:w-50 lg:w-56 lg:h-56 xl:w-64 xl:h-64 mb-3 cursor-pointer hover:bg-[rgba(150,0,0,0.6)] transition duration-300 flex flex-col items-center justify-center">
+                <div className="text-center bg-white p-8 aspect-square h-72 w-72 md:h-50 md:w-50 lg:w-56 lg:h-56 xl:w-64 xl:h-64 mb-3 cursor-pointer transition duration-300 flex flex-col items-center justify-center hover:bg-[rgba(255,255,255,0.5)]">
                     <p className="font-bold text-3xl">PENDING TASKS:</p>
                     <p className="mt-6 text-3xl text-black font-semibold">3</p>
                 </div>
